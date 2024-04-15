@@ -4,8 +4,8 @@ import EstateCart from "./EstateCart";
 const FindYourHome = () => {
     const estates=useLoaderData();
     return (
-        <div className="py-5 mt-8">
-           <div className="px-5 text-center">
+        <div className="py-5 pt-8 mt-8 space-y-3">
+           <div className="px-5 py-4 text-center">
            <h2 className="text-5xl">Find Your Dream Home</h2>
             <p>Explore new apartments, land estates, house and land, home designs, builders and more.
           </p>
