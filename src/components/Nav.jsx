@@ -25,11 +25,14 @@ const Nav = () => {
         <div className="hidden navbar-center lg:flex">
           <ul className="px-1 menu menu-horizontal">
         <li><NavLink to="/">Home</NavLink> </li>
+        <li><NavLink to="/update">Update Profile</NavLink></li>
         <li><NavLink to="/about">About</NavLink> </li>
-        <li><NavLink to="/*">Home</NavLink> </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="flex items-center gap-4 navbar-end">
+          <div>
+            <img className="w-10 h-10 border-2 border-red-600 rounded-full" src="" alt="" />
+          </div>
           <Link to="/login" className="btn">Log in</Link>
         </div>
       </div>

@@ -6,6 +6,10 @@ import Root from "./root/Root";
 import Home from "./pages/Home";
 import EstDetails from "./pages/EstDetails";
 import Login from "./components/Login";
+import UpdateProfile from "./pages/UpdateProfile";
+import About from "./pages/About";
+import FirebaseProvider from "./firebaaseProvider/FirebaseProvider";
+import Register from "./pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -26,12 +30,26 @@ const router = createBrowserRouter([
         path:"/login",
         element:<Login/>
       },
+      {
+        path:"/update",
+        element:<UpdateProfile></UpdateProfile>
+      },
+      {
+        path:"/about",
+        element:<About></About>
+      },
+      {
+        path:"/register",
+        element:<Register></Register>
+      }
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <FirebaseProvider>
     <RouterProvider router={router} />
+    </FirebaseProvider>
   </React.StrictMode>
 );
