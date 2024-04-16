@@ -10,6 +10,7 @@ import UpdateProfile from "./pages/UpdateProfile";
 import About from "./pages/About";
 import FirebaseProvider from "./firebaaseProvider/FirebaseProvider";
 import Register from "./pages/Register";
+import Contact from "./components/Contact";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register></Register>
+      },
+      {
+        path:"/contact",
+        element:<Contact></Contact>
       }
     ]
   },

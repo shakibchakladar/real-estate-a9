@@ -1,15 +1,18 @@
 
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebaseConfig";
 import { GoogleAuthProvider } from "firebase/auth";
-
-// import { GoogleAuthProvider } from "firebase/auth/cordova";
-// import { GoogleAuthProvider } from "firebase/auth/cordova";
+import { GithubAuthProvider } from "firebase/auth";
 export const AuthContext=createContext(null);
+import { TwitterAuthProvider } from "firebase/auth";
+
 
 // social auth providers
 const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
+const twiterProvider = new TwitterAuthProvider();
+
 
 
 const FirebaseProvider = ({children}) => {
@@ -30,6 +33,21 @@ console.log(user);
     return signInWithPopup(auth, googleProvider);
   }
 
+  // github
+  const gitHubLogin=()=>{
+    return signInWithPopup(auth, githubProvider)
+  }
+
+  // twitter
+  const twiter=()=>{
+    return signInWithPopup(auth,twiterProvider);
+  }
+  // log out 
+  const logOut=()=>{
+    setUser(null)
+    signOut(auth)
+  }
+
   // observer
  useEffect(()=>{
   onAuthStateChanged(auth, (user) => {
@@ -44,7 +62,11 @@ console.log(user);
   const allValues={
     createUser,
     signInUser,
-    googleLogin
+    googleLogin,
+    gitHubLogin,
+    logOut,
+    user,
+    twiter
   }
   return (
    <AuthContext.Provider value={allValues}>

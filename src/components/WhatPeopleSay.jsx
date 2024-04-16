@@ -44,7 +44,7 @@ const WhatPeopleSay = () => {
             <div className="flex space-x-4">
               <div>
                 <img
-                  src="https://source.unsplash.com/100x100/?portrait"
+                  src="https://i.ibb.co/yRmVVMr/dima-kapralov-ubc87a-Nn-Z2-Q-unsplash.jpg"
                   alt=""
                   className="object-cover w-12 h-12 rounded-full dark:bg-gray-500"
                 />
@@ -80,7 +80,7 @@ const WhatPeopleSay = () => {
             <div className="flex space-x-4">
               <div>
                 <img
-                  src="https://source.unsplash.com/100x100/?portrait"
+                  src="https://i.ibb.co/3sH7H7v/diana-yildirim-N5hvls8-AF-w-unsplash.jpg"
                   alt=""
                   className="object-cover w-12 h-12 rounded-full dark:bg-gray-500"
                 />
