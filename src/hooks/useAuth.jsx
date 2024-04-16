@@ -1,10 +1,8 @@
-import  { useContext } from 'react';
-import { AuthContext } from '../firebaaseProvider/FirebaseProvider';
-// import { AuthContext } from '../FirebaseProvider/FirebaseProvider';
+import { useContext } from "react";
+import { AuthContext } from "../firebaaseProvider/FirebaseProvider";
 
 const useAuth = () => {
-
-    const all = useContext(AuthContext)
+    const all=useContext(AuthContext);
     return all;
 };
 
