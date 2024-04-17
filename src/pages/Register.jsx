@@ -1,5 +1,5 @@
 // import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import { AuthContext } from "../firebaaseProvider/FirebaseProvider";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
@@ -7,6 +7,11 @@ import SocialLogin from "../components/SocialLogin";
 
 const Register = () => {
   const {createUser}=useAuth();
+
+  // navigate
+  const navigate=useNavigate();
+// const location=useLocation();
+const from= "/";
 
   const {
     register,
@@ -17,7 +22,9 @@ const Register = () => {
     const {email,password}=data
     createUser(email,password)
     .then(result=>{
-      console.log(result);
+      if(result.user){
+        navigate(from)
+      }
     })
   };
   return (

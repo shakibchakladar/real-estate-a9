@@ -6,12 +6,15 @@ import { GoogleAuthProvider } from "firebase/auth";
 import { GithubAuthProvider } from "firebase/auth";
 export const AuthContext=createContext(null);
 import { TwitterAuthProvider } from "firebase/auth";
+import { FacebookAuthProvider } from "firebase/auth";
 
 
 // social auth providers
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 const twiterProvider = new TwitterAuthProvider();
+const facebookProvider = new FacebookAuthProvider();
+
 
 
 
@@ -42,6 +45,11 @@ console.log(user);
   const twiter=()=>{
     return signInWithPopup(auth,twiterProvider);
   }
+
+  // facebook
+  const facebookLogin=()=>{
+    return signInWithPopup(auth,facebookProvider);
+  }
   // log out 
   const logOut=()=>{
     setUser(null)
@@ -66,7 +74,8 @@ console.log(user);
     gitHubLogin,
     logOut,
     user,
-    twiter
+    twiter,
+    facebookLogin
   }
   return (
    <AuthContext.Provider value={allValues}>

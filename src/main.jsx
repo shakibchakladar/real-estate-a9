@@ -4,13 +4,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Root from "./root/Root";
 import Home from "./pages/Home";
-import EstDetails from "./pages/EstDetails";
+// import EstDetails from "./pages/EstDetails";
 import Login from "./components/Login";
 import UpdateProfile from "./pages/UpdateProfile";
 import About from "./pages/About";
 import FirebaseProvider from "./firebaaseProvider/FirebaseProvider";
 import Register from "./pages/Register";
 import Contact from "./components/Contact";
+import PrivateRoute from "./components/PrivateRoute";
+import EstDetails from "./pages/EstDetails";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +26,9 @@ const router = createBrowserRouter([
       },
       {
         path:"/details/:id",
-        element:<EstDetails></EstDetails>,
+        element:<PrivateRoute>
+          <EstDetails></EstDetails>
+        </PrivateRoute>,
         loader:()=>fetch("/src/data.json")
       },
       {
