@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import 'animate.css';
+
 
 const EstateCart = ({estate}) => {
 
@@ -11,7 +13,7 @@ const EstateCart = ({estate}) => {
    const {image,location,estate_title,price,id,area}=estate
     return (
       <>
-            <div className="shadow-xl card card-compact">
+            <div className="shadow-xl card card-compact animate__animated animate__bounce">
                 <figure className='h-5/6'>
 
                     <img src={image} alt="car!" />
@@ -22,7 +24,7 @@ const EstateCart = ({estate}) => {
                   <p>{area}</p>
 
                   </div>
-                    <h2 className="text-2xl font-bold">{estate_title}</h2>
+                    <h2 className="text-2xl font-bold animate__animated animate__bounce animate__headShake ">{estate_title}</h2>
                     <p>{location}</p>
                     <div className="justify-end card-actions">
                     <Link to={`/details/${id}`}><button onClick={handleDetails} className="btn btn-neutral btn-sm">ViewProperty</button></Link>

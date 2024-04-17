@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 // import { AuthContext } from "../firebaaseProvider/FirebaseProvider";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
+import SocialLogin from "./SocialLogin";
 
 const Login = () => {
     const {signInUser}=useAuth()
@@ -40,7 +41,7 @@ const from=location?.state || "/";
             <div className="flex-col hero-content lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Login now!</h1>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <p className="py-6">If you want to access our website please log in here</p>
                 </div>
                 <div className="flex-shrink-0 w-full max-w-sm shadow-2xl card bg-base-100">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -69,8 +70,8 @@ const from=location?.state || "/";
                         <label className="label">
                             New here? <Link to="/register" className="label-text-alt link link-hover">Create an account</Link>
                         </label>
+                        <SocialLogin/>
                     </form>
-                        {/* <SocialLogin /> */}
                 </div>
             </div>
         </div>

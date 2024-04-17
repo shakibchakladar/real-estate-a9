@@ -96,7 +96,8 @@ const [loading,setLoading]=useState(true);
     user,
     twiter,
     facebookLogin,
-    loading
+    loading,
+    updateUserProfile
   }
   return (
    <AuthContext.Provider value={allValues}>

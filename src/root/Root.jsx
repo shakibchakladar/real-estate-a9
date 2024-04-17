@@ -5,10 +5,13 @@ import Footer from "../components/Footer";
 const Root = () => {
     return (
         <div>
-            <div className="mb-7">
+            <div className="-mt-5">
             <Nav></Nav>
             </div>
+            <div className="py-10">
             <Outlet></Outlet>
+
+            </div>
             <Footer></Footer>
         </div>
     );

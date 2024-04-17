@@ -17,7 +17,7 @@ const EstdetailsCart = ({ estate }) => {
   return (
 
     <>
-    <div className="grid grid-cols-1 md:grid-cols-2 md:h-[880px]">
+    <div className="grid grid-cols-1 md:grid-cols-2 md:h-[880px] animate__animated animate__bounce">
       <div className="flex items-center justify-center bg-white ">
         <img src={image} alt="" />
         <p>{status}</p>

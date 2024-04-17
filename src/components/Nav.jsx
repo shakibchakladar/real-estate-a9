@@ -4,7 +4,7 @@ import useAuth from "../hooks/useAuth";
 const Nav = () => {
   const { logOut, user } = useAuth();
   return (
-    <div className="navbar bg-base-100">
+    <div className="fixed z-10 p-5 navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

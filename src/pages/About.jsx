@@ -1,8 +1,9 @@
+import 'animate.css';
 
 const About = () => {
     return (
-  <div>
-          <div className="min-h-[300px] hero" style={{backgroundImage: 'url(https://i.ibb.co/drDYM08/brian-babb-Xbw-Hrt87m-Q0-unsplash.jpg)'}}>
+  <div className="pt-36">
+          <div className="min-h-[300px] hero animate__flash" style={{backgroundImage: 'url(https://i.ibb.co/drDYM08/brian-babb-Xbw-Hrt87m-Q0-unsplash.jpg)'}}>
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="text-center hero-content text-neutral-content">
     <div className="max-w-md">
@@ -13,7 +14,7 @@ const About = () => {
   </div>
 </div>
 
-<div className="flex gap-5 px-5 mt-7">
+<div className="flex gap-5 px-5 mt-10 animate__flash animate__animated animate__bounce">
     <div className="w-1/2"><img src="https://i.ibb.co/drDYM08/brian-babb-Xbw-Hrt87m-Q0-unsplash.jpg" alt="" /></div>
     <div className="w-1/2">
         <div className="h-96 bg-base-200 p-7">

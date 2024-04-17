@@ -4,6 +4,8 @@ import { Navigation, Pagination, Scrollbar, A11y, EffectFlip } from 'swiper/modu
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'animate.css';
+
 // import { EffectFade } from 'swiper/modules';
 
 
@@ -20,7 +22,7 @@ const Slider = () => {
     pagination={{ clickable: true }}
     scrollbar={{ draggable: true }}
   >
-    <SwiperSlide>
+    <SwiperSlide className='animate__flash animate__animated animate__bounce'>
       <img src="https://i.ibb.co/MR7W9VM/frames-for-your-heart-m-R1-CIDdu-GLc-unsplash.jpg" alt="" className='w-full' />
     </SwiperSlide>
     <SwiperSlide>
