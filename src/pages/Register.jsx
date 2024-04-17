@@ -1,12 +1,10 @@
-// import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { AuthContext } from "../firebaaseProvider/FirebaseProvider";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
 import SocialLogin from "../components/SocialLogin";
 
 const Register = () => {
-  const {createUser}=useAuth();
+  const {createUser,updateUserProfile}=useAuth();
 
   // navigate
   const navigate=useNavigate();
@@ -19,12 +17,19 @@ const from= "/";
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    const {email,password}=data
+    const {email,password,image,fullName}=data
     createUser(email,password)
-    .then(result=>{
-      if(result.user){
-        navigate(from)
-      }
+    .then(()=>{
+      updateUserProfile(fullName,image)
+      .then(()=>{
+        
+          navigate(from)
+        
+
+      })
+      // if(result.user){
+      //   navigate(from)
+      // }
     })
   };
   return (

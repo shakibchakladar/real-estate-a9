@@ -1,77 +1,49 @@
-import React from "react";
 
 const EstdetailsCart = ({ estate }) => {
-  const handleRead = () => {
-    // Define functionality for handling 'Read' button click
-  };
 
-  const handleWishlist = () => {
-    // Define functionality for handling 'Wishlist' button click
-  };
 
   const {
     image,
     estate_title,
-    author,
-    review,
-    tags,
-    totalPages,
-    publisher,
-    yearOfPublishing,
-    rating,
+    segment_name,
+    description,
+    price,
+    status,
+    area,
+    location,
+    facilities,
   } = estate;
 
   return (
-    <section className="container px-8 mx-auto dark:bg-gray-100 dark:text-gray-800">
-      <div className="container flex flex-col justify-center p-6 px-10 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-        <div className="rounded-lg flex items-center justify-center p-6 mt-8 lg:mt-0 h-80 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 bg-[#1313130D] w-[500px]">
-          <img className="p-20 w-80" src={image} alt={estate_title} />
-        </div>
-        <div className="flex flex-col justify-center p-6 space-y-3 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-          <h1 className="text-5xl font-bold leading-none sm:text-6xl">{estate_title}</h1>
-          <p><span className="font-bold">By:</span> {author}</p>
-          <hr />
-          <p className="mt-6 mb-8 text-lg sm:mb-12"><span className="font-bold">Review:</span> {review}</p>
-          {/* <div className="flex justify-around py-3">
-            <h2 className="font-bold">Tags:</h2>
-            {tags.map((tag, index) => (
-              <h2 key={index} className="text-[#23BE0A]">#{tag}</h2>
-            ))}
-          </div> */}
-          <hr />
-          <div className="flex gap-x-6">
-            <h2>Number of pages:</h2>
-            <h1>{totalPages}</h1>
+
+    <>
+    <div className="grid grid-cols-1 md:grid-cols-2 md:h-[880px]">
+      <div className="flex items-center justify-center bg-white ">
+        <img src={image} alt="" />
+        <p>{status}</p>
+      </div>
+      <div className="flex items-center text-slate-900 bg-sky-500 py-9 ">
+        <div className=" bg-blue-300 h-auto md:h-[80%] md:-ml-24  p-9 py-7">
+          <h1 className="mb-8 text-5xl font-bold">{estate_title}</h1>
+          <p>{description}</p>
+          <div className="space-y-5">
+            <p className="mt-10 font-bold">Area: {area}</p>
+            <p>Location: {location}</p>
+            <p>Facilities:</p>
+            <ul>
+              {facilities.map((facility, index) => (
+                <li key={index}>{facility}</li>
+              ))}
+            </ul>
+            <h1 className="my-4 text-4xl font-bold">${price}</h1>
           </div>
-          <div className="flex gap-x-6">
-            <h2>Publisher:</h2>
-            <h1>{publisher}</h1>
-          </div>
-          <div className="flex gap-x-6">
-            <h2>Year of publishing:</h2>
-            <h1>{yearOfPublishing}</h1>
-          </div>
-          <div className="flex gap-x-6">
-            <h2>Rating :</h2>
-            <h1>{rating}</h1>
-          </div>
-          <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-            <button
-              onClick={handleRead}
-              className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50"
-            >
-              Read
-            </button>
-            <button
-              onClick={handleWishlist}
-              className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-800"
-            >
-              Wishlist
-            </button>
-          </div>
+          <br />
+          <p>{segment_name}</p>
+          <button className="btn">Buy it now!</button>
         </div>
       </div>
-    </section>
+    </div>
+  </>
   );
 };
 

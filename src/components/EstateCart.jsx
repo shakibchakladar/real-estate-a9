@@ -8,18 +8,28 @@ const EstateCart = ({estate}) => {
 
 
 
-   const {image,location,estate_title,price,id}=estate
+   const {image,location,estate_title,price,id,area}=estate
     return (
-        <div className="shadow-xl card w-96 bg-base-100">
-  <figure><img src={image} alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">{estate_title}</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="justify-start card-actions">
-      <Link to={`/details/${id}`}><button onClick={handleDetails} className="btn btn-primary">ViewProperty</button></Link>
-    </div>
-  </div>
-</div>
+      <>
+            <div className="shadow-xl card card-compact">
+                <figure className='h-5/6'>
+
+                    <img src={image} alt="car!" />
+                </figure>
+                <div className="card-body">
+                  <div className="flex justify-between gap-x-10">
+                  <h2 className="card-title">${price}</h2>
+                  <p>{area}</p>
+
+                  </div>
+                    <h2 className="text-2xl font-bold">{estate_title}</h2>
+                    <p>{location}</p>
+                    <div className="justify-end card-actions">
+                    <Link to={`/details/${id}`}><button onClick={handleDetails} className="btn btn-neutral btn-sm">ViewProperty</button></Link>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 };
 
