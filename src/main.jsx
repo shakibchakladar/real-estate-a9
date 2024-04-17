@@ -13,11 +13,13 @@ import Register from "./pages/Register";
 import Contact from "./components/Contact";
 import PrivateRoute from "./components/PrivateRoute";
 import EstDetails from "./pages/EstDetails";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Root></Root>,
+    errorElement:<NotFound></NotFound>,
     children:[
       {
         path:"/",

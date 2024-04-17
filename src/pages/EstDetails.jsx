@@ -7,11 +7,9 @@ const EstDetails = () => {
     // const book=books.find(book=>book.bookId==id)
     const estate=allest.find(estate=>estate.id==id);
     // console.log(estate);
-    // console.log(estDetails);
-    // console.log(id);
     return (
         <div>
-            <h2>This is details for estate with ID: {id}</h2>
+            {/* <h2>This is details for estate with ID: {id}</h2> */}
             {
                <EstdetailsCart key={estate.id} estate={estate}></EstdetailsCart> 
             }
