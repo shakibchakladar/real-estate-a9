@@ -24,16 +24,14 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        // loader:()=>fetch("/src/data.json")
-        loader:()=>fetch("/public/fakeData.json")
+        loader:()=>fetch("/fakeData.json")
       },
       {
         path:"/details/:id",
         element:<PrivateRoute>
           <EstDetails></EstDetails>
         </PrivateRoute>,
-        // loader:()=>fetch("/src/data.json")
-        loader:()=>fetch("/public/fakeData.json")
+        loader:()=>fetch("/fakeData.json")
       },
       {
         path:"/login",
