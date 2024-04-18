@@ -1,7 +1,7 @@
 const WhatPeopleSay = () => {
   return (
     <div className="py-8 ">
-      <h2 className="text-5xl text-center">What People Say</h2>
+      <h2 className="text-5xl text-center animate__backInDown">What People Say</h2>
 
       <div className="grid grid-cols-2">
         <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800 mt-7">

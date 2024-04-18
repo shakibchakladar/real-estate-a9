@@ -27,16 +27,14 @@ const Nav = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            {/* <Menus /> */}
           </ul>
         </div>
         <Link to="/" className="text-3xl font-bold normal-case btn btn-ghost">
-          HavenHome
+          <span className="text-purple-600">Haven</span><span className="text-purple-300">Home</span>
         </Link>
       </div>
       <div className="hidden navbar-center lg:flex">
         <ul className="px-1 menu menu-horizontal">
-          {/* <Menus /> */}
           <li>
             <NavLink to="/">Home</NavLink>{" "}
           </li>
