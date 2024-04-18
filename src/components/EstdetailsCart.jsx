@@ -81,7 +81,7 @@ const EstdetailsCart = ({ estate }) => {
             <p>Location: {location}</p>
             <p>Facilities:</p>
             <ul>
-              {Array.isArray(facilities) && facilities.map((facility, index) => (
+              {Array.isArray(facilities) && facilities?.map((facility, index) => (
                 <li key={index}>{facility}</li>
               ))}
             </ul>

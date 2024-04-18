@@ -5,7 +5,7 @@ const EstDetails = () => {
     const { id } = useParams(); 
     const allest=useLoaderData();
     // const book=books.find(book=>book.bookId==id)
-    const estate=allest.find(estate=>estate.id==id);
+    const estate=allest?.find(estate=>estate.id==id);
     // console.log(estate);
     return (
         <div>

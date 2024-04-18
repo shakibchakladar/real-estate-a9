@@ -13,7 +13,7 @@ const FindYourHome = () => {
             </div>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
                 {/* Map over estates and render EstateCart component for each */}
-                {estates.map(estate => (
+                {estates?.map(estate => (
                     <EstateCart key={estate.id} estate={estate}></EstateCart>
                 ))}
             </div>
